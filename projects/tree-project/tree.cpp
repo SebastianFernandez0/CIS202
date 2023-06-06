@@ -1,12 +1,13 @@
 #include"tree.h"
 
+using namespace std;
 
 Tree::Tree()
 {
    root = nullptr;
 }
 
-Tree::Tree(std::string root_data)
+Tree::Tree(string root_data)
 {
    root = new Node;
    root->data = root_data;
@@ -39,7 +40,7 @@ int Node::size() const
 
 void Node::print() const
 {
-   std::cout << data << std::endl;
+   cout << data << endl;
    for (Node* np : children)
    {
       np->print();

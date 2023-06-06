@@ -5,11 +5,13 @@
 #include<string>
 #include<iostream>
 
+using namespace std;
+
 class Node
 {
 private:
-   std::string data;
-   std::vector<Node*> children;
+   string data;
+   vector<Node*> children;
 
    int size() const;
    void print() const;
@@ -21,7 +23,7 @@ class Tree
 {
 public:
    Tree();
-   Tree(std::string root_data);
+   Tree(string root_data);
    void add_subtree(const Tree& subtree);
    int size() const;
    void print() const;

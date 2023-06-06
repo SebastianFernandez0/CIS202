@@ -2,6 +2,8 @@
 #include <string>
 #include "tree.h"
 
+using namespace std;
+
 int main()
 {
    Tree t1("Anne");
@@ -11,7 +13,7 @@ int main()
    t1.add_subtree(t3);
    Tree t4("Savannah");
    t2.add_subtree(t4);
-   std::cout << "Size: " << t1.size() << std::endl;
+   cout << "Size: " << t1.size() << endl;
 
    t1.print();   
 
