@@ -79,7 +79,7 @@ int main() {
     info.push_back(Mountain("Zugspitze", "Switzerland", 9719));
 
     // Title
-    cout << left << setw(31) << "Mountain" << setw(27) << "Country" << setw(19) << "Elevation (ft)" << "Elevation (m)" << endl;
+    cout << left << setw(30) << "Mountain" << setw(25) << "Country" << setw(17) << "Elevation (ft)" << "Elevation (m)" << endl;
     cout << "--------------------------------------------------------------------------------------" << endl;
 
     // Table
