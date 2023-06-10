@@ -14,14 +14,14 @@ private:
     double elevation;
 
 public:
-    // ----------Constructor------------
+    // Constructor
     Mountain(const string& Name, const string& Country, double Elevation){
         this->mounName = Name;
         this->country = Country;
         this->elevation = Elevation;
     }
 
-    // ------------Getters-------------
+    // Getters
     string getName() const {
         return mounName;
     }
@@ -34,7 +34,7 @@ public:
         return elevation;
     }
 
-    // -----------Setters--------------
+    //Setters
     void setNa(const string& Name){
         this->mounName = Name;
     }
@@ -52,10 +52,13 @@ public:
     }
 };
 
+
+
 Mountain findMin(const vector<Mountain>& mountains) {
 
     Mountain smallest = mountains[0];
 
+    //Figure out the smallest mountain
     for (const Mountain& mountain : mountains) {
 
         if (mountain.getElv() < smallest.getElv()) {
@@ -65,11 +68,12 @@ Mountain findMin(const vector<Mountain>& mountains) {
     return smallest;
 }
 
+
+
 int main() {
-// Mountain Info
     vector<Mountain> info;
 
-
+    //Mountains and their information
     info.push_back(Mountain("Chimborazo","Ecuador",20549));
     info.push_back(Mountain("Matterhorn", "Switzerland", 14692));
     info.push_back(Mountain("Olympus", "Greece (Macedonia)", 9573));
@@ -78,11 +82,11 @@ int main() {
     info.push_back(Mountain("Mount Mitchell - Blue Ridge", "United States", 6684));
     info.push_back(Mountain("Zugspitze", "Switzerland", 9719));
 
-    // Title
+    // Title for the table
     cout << left << setw(30) << "Mountain" << setw(25) << "Country" << setw(17) << "Elevation (ft)" << "Elevation (m)" << endl;
     cout << "--------------------------------------------------------------------------------------" << endl;
 
-    // Table
+    // Table of all mountain and their elevation
     for (const Mountain& mountain : info) {
         cout << left << setw(30) << mountain.getName() << setw(25) << mountain.getCo() << setw(18) << mountain.getElv() << mountain.toMeters() << endl;
     }
@@ -90,6 +94,7 @@ int main() {
     Mountain min = findMin(info);
 
     cout << endl;
+    //The output for smallest mountain
     cout<< min.getName() << " is the smallest mountain with an Elevation of " << min.getElv() << " ft." << endl;
 
     return 0;
